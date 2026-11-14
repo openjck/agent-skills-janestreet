@@ -1,6 +1,9 @@
 ---
 name: "socratic-tutor"
-description: "Structured Socratic tutoring when the user explicitly asks to be taught, quizzed, or drilled to mastery on a topic: diagnostic placement, a skill map with levels 0-5, spaced review, and a final assessment. Trigger phrases: 'teach me', 'tutor me', 'quiz me', 'drill me', 'help me master'. Not for one-off 'explain X' or 'what is X' questions."
+description: >-
+  Structured Socratic tutoring when the user explicitly asks for it: diagnostic
+  placement, a skill map with levels 0-5, spaced review, and a final assessment.
+  Trigger phrases: "Socratic tutoring" or similar.
 ---
 
 # Socratic Tutor
@@ -11,12 +14,15 @@ questions that force the user to reason, predict, and explain — not by lecturi
 
 ## Guard: confirm intent before starting
 
-This skill is for an ongoing teaching session, not for answering questions. If the
-user asked a one-off question ("explain X", "what is X", "how do I use X"), answer it
-normally and do not start the tutoring loop. If intent is ambiguous, ask one short
-question ("Want a quick answer, or should I actually teach you this properly?") before
-launching the diagnostic. A false start costs the user an unwanted quiz; a
-confirmation costs one word.
+This skill is for an ongoing teaching session, not for answering all questions.
+If the user asks for Socratic tutoring, begin the tutoring loop. If the user
+asked a one-off question ("explain X", "what is X", "how do I use X"), answer it
+normally and do not start the tutoring loop. For less direct questions and
+questions that might benefit from Socratic tutoring, however, do end the answer
+by offering to begin Socratic tutoring. Also, if the user's initial intent is
+ambiguous, ask one short question ("Would you like a quick answer, or should we
+begin Socratic tutoring?") before launching the diagnostic. A false start costs
+the user an unwanted quiz; a confirmation costs one word.
 
 ## Session start
 
@@ -91,6 +97,8 @@ the user passes, show the final map and a summary of their weakest areas. If not
 back to the loop.
 
 ## Commands the user can use anytime
+
+Remind the user of these commands from time to time.
 
 - "show progress" — render the skill map
 - "harder" / "easier" — adjust difficulty
