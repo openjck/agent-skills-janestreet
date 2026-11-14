@@ -1,3 +1,12 @@
+This is my personal fork of
+[janestreet/agent_skills](https://github.com/janestreet/agent_skills) with some
+tweaks that, among other things, make the skills less likely to be invoked
+accidentally.
+
+The README of the original repo is below.
+
+---
+
 # Agent skills from Jane Street
 
 A collection of skills for AI agents and chatbots.
